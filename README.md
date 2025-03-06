@@ -17,3 +17,24 @@ Geo by SendSimple.ca will also push the boundaries of email design with animated
 
 ****************************************************************************************************************************
 
+# Types of Responsive Email
+
+1. Fluid Emails
+	•	Use percentage-based widths instead of fixed pixel sizes.
+	•	Adjusts smoothly across different screen sizes.
+
+2. Scalable Emails
+	•	Designed using large fonts and touch-friendly buttons.
+	•	Works well on both desktop and mobile without major layout changes.
+
+3. Hybrid (Spongy) Emails
+	•	Uses a mix of fluid and fixed-width elements.
+	•	Adapts dynamically while maintaining a structured layout.
+
+4. Mobile-First Emails
+	•	Designed for mobile screens first and then scaled up for larger screens.
+	•	Ensures a great experience for smartphone users.
+
+5. Adaptive Emails
+	•	Uses media queries to create different layouts for different screen sizes.
+	•	Can hide or adjust content based on the device.
