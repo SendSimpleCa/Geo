@@ -18,9 +18,7 @@ Geo by SendSimple.ca will also push the boundaries of email design with animated
 
 ****************************************************************************************************************************
 
-## Types of Responsive Email
-
-### **Email Design Approaches** ###
+## **Email Design Approaches** ##
 
 
 ### 1. **Fluid Emails** ###
