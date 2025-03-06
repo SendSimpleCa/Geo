@@ -20,30 +20,30 @@ Geo by SendSimple.ca will also push the boundaries of email design with animated
 
 ## Types of Responsive Email
 
-###**Email Design Approaches**###
+### **Email Design Approaches** ###
 
 
-###1. **Fluid Emails**###
+### 1. **Fluid Emails** ###
 
 These emails utilize percentage-based widths instead of fixed pixel dimensions, allowing content to flow naturally and adjust proportionally across various screen sizes. The result is a seamless viewing experience that automatically conforms to the user's device without breakpoints.
 
 
-###2. **Scalable Emails**###
+### 2. **Scalable Emails** ###
 
 Scalable design employs larger fonts and touch-friendly buttons that maintain usability across all platforms. This approach creates a consistent experience between desktop and mobile without requiring significant layout transformations, keeping the design integrity intact regardless of viewport size.
 
 
-###3. **Fluid Hybrid Emails**###
+### 3. **Fluid Hybrid Emails** ###
    
 The hybrid approach blends fluid and fixed-width elements strategically to create emails that maintain structure while still adapting to different devices. This balanced methodology offers the stability of fixed layouts with the flexibility of fluid designs, making it highly versatile for complex email campaigns.
 
 
-###4. **Mobile-First Emails**###
+### 4. **Mobile-First Emails** ###
    
 Starting with smartphone-optimized designs and progressively enhancing for larger screens ensures mobile users receive the best possible experience. This approach prioritizes the constraints and opportunities of small screens, then thoughtfully expands functionality for desktop environments.
 
 
-###5. **Adaptive Emails**###
+### 5. **Adaptive Emails** ###
 
 Leveraging media queries, adaptive emails deliver tailored layouts optimized for specific device categories. This technique allows for precise control over content visibility and arrangement based on screen dimensions, enabling dramatically different presentations of the same content across devices.
 
