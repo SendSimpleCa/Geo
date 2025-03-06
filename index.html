@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website coming soon - stay tuned for our launch">
+    <meta name="keywords" content="coming soon, website, launch">
+    <meta name="author" content="Your Name">
+    <title>Coming Soon | SendSimple Email Templates</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:title" content="Coming Soon | Your Website Name">
+    <meta property="og:description" content="Our website is launching soon. Stay tuned!">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .logo {
+            margin-bottom: 30px;
+            max-width: 150px;
+        }
+        
+        .contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .email {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .email:hover {
+            text-decoration: underline;
+        }
+        
+        .social {
+            margin-top: 30px;
+        }
+        
+        .social a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #7f8c8d;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social a:hover {
+            color: #2c3e50;
+        }
+        
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Replace with your logo -->
+        <img src="logo.png" alt="Your Logo" class="logo">
+        
+        <h1>Coming Soon</h1>
+        
+        <p>We're working hard to finish the development of this site. Our target launch date is:</p>
+        <p><strong>January 1, 2026</strong></p>
+        
+        <p>Sign up for updates to be the first to know when we launch!</p>
+        
+        <!-- Add your email signup form here -->
+        <form id="signup-form">
+            <input type="email" name="email" placeholder="Your email address" required style="padding: 10px; width: 60%; margin-right: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            <button type="submit" style="padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">Notify Me</button>
+        </form>
+        
+        <div class="contact">
+            <p>For more information, please contact us:</p>
+            <a href="mailto:info@yourwebsite.com" class="email">info@yourwebsite.com</a>
+            
+            <div class="social">
+                <a href="https://twitter.com/yourhandle" aria-label="Twitter">Twitter</a>
+                <a href="https://facebook.com/yourpage" aria-label="Facebook">Facebook</a>
+                <a href="https://instagram.com/yourhandle" aria-label="Instagram">Instagram</a>
+                <a href="https://linkedin.com/company/yourcompany" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Basic JavaScript for the email signup form -->
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Thank you for your interest! We\'ll notify you when we launch.');
+            // In a real implementation, you would send this data to your server or email service
+        });
+    </script>
+</body>
+</html>
