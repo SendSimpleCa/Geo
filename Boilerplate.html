@@ -1,29 +1,47 @@
-
+<!-- Sets Doctype to HTML5 for best compatibility -->
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-  <head>
-    <meta charset="utf-8">
 
-    <!-- utf-8 works for most cases -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Forcing initial-scale shouldnt be necessary -->
-    <meta name="x-apple-disable-message-reformatting">
-    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+   <head>
+      <!-- utf-8 is standard for text rendering -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <!-- Disable auto-scale in iOS 10 Mail entirely and tell iOS not to automatically link certain text strings. -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Defines vieport behavior. 1.0 is standard for most use cases-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tells edge how to render -->
-    <title>Instacart</title>
+      <!-- Disable auto-scale and link formatting in iOS mail -->
+      <meta name="x-apple-disable-message-reformatting">
+      <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
 
-    <!-- The title tag shows in email notifications, like Android 4.4. -->
+      <!-- Forces Internet Explorer to use edge mode -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!--[if gte mso 9]>
-<xml>
-   <o:OfficeDocumentSettings>
-      <o:AllowPNG/>
-      <o:PixelsPerInch>96</o:PixelsPerInch>
-   </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
+      <!-- Informs the browser that the page supports both light and dark color schemes-->
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+
+      <!-- Font import - fallback web safe font for Microsoft Outlook Desktop -->
+      <!--[if mso]>
+      <style>
+         * {
+         font-family: 'Segoe UI', sans-serif !important;
+         }
+      </style>
+      <![endif]-->
+
+
+      <!-- Render Fix for images in Microsoft Outlook Desktop -->
+      <!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+
+
+
+      <!-- Document title (not displayed in email) -->
+      <title>SendSimple.Ca | Geo v0.1 </title>
