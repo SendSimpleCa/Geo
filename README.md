@@ -1,8 +1,6 @@
 # Geo v0.1
 Geo is a practical guide and framewrok for understanding and developing html email. 
-
 From the very basics of understanding email rendering and design to using our email boilerplate and a full library of modular snippets. 
-
 Provided by SendSimple.ca
 
 Author - Daniel Sivan
