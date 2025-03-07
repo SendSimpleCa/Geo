@@ -22,8 +22,8 @@ Geo by SendSimple.ca seeks to solve development hurdles by providing a modular t
 ### 1️⃣ Fluid Emails (Uses percentage-based widths) ###
 
 ✔ Uses width: 100% or percentages instead of fixed pixels. <br>
-✔ Works well in all email clients, even Outlook.
-✔ No media queries needed.
+✔ Works well in all email clients, even Outlook. <br>
+✔ No media queries needed.<br>
 
 Example: 
 ```
@@ -37,9 +37,9 @@ Example:
 
 ### 2️⃣ Scalable Emails (Bigger fonts, buttons, easy to tap) ###
 
-✔ Uses bigger fonts, touch-friendly buttons for mobile.
-✔ Scales up or down naturally without major layout shifts.
-✔ No advanced media queries needed.
+✔ Uses bigger fonts, touch-friendly buttons for mobile.<br>
+✔ Scales up or down naturally without major layout shifts.<br>
+✔ No advanced media queries needed.<br>
 
 Example: 
 ```
@@ -53,9 +53,9 @@ Example:
 
 ### 3️⃣ Hybrid (Spongy) Emails (Mix of fixed and fluid elements) ###
 
-✔ Uses max-width + percentage widths for better control.
-✔ Works in Outlook without media queries.
-✔ More structured than pure fluid layouts.
+✔ Uses max-width + percentage widths for better control.<br>
+✔ Works in Outlook without media queries.<br>
+✔ More structured than pure fluid layouts.<br>
 
 
 Example: 
@@ -70,9 +70,9 @@ Example:
 
 ### 4️⃣ Mobile-First Emails (Starts with mobile layout) ###
 
-✔ Uses media queries to adjust layout for larger screens.
-✔ Defaults to a single-column layout.
-✔ Better UX for mobile users.
+✔ Uses media queries to adjust layout for larger screens.<br>
+✔ Defaults to a single-column layout.<br>
+✔ Better UX for mobile users.<br>
 
 Example: 
 ```
@@ -92,9 +92,9 @@ Example:
 
 ### 5️⃣ Adaptive Emails (Uses media queries to completely change layout) ###
 
-✔ Uses CSS media queries to switch layouts.
-✔ Can hide/show content based on screen size.
-✔ Gives full control over desktop vs. mobile views..
+✔ Uses CSS media queries to switch layouts.<br>
+✔ Can hide/show content based on screen size.<br>
+✔ Gives full control over desktop vs. mobile views.<br>
 
 Example: 
 ```
@@ -111,10 +111,6 @@ Example:
   </tr>
 </table>
 ```
-
-
-
-
 
 
 ****************************************************************************************************************************
