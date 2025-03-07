@@ -188,5 +188,42 @@
          margin: 0 auto !important;
       </style>
 
-      <!-- Outlook specific CSS Reset Styles -->
-       
+<!-- Fonts in HTML email are tricky because not all email clients support web fonts. Unlike web design, where you can load almost any font via CSS, email clients like Outlook, Gmail, and Apple Mail each have their own restrictions. -->
+
+<!-- Importing fonts in email 3 methods -->
+<!-- Method 1 - using <link> -->
+
+<link rel="noopener" target="_blank" rel="noopener" target="_blank" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<!-- Importing fonts in email 3 methods -->
+<!-- Method 2 - using @import url -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+</style>
+
+<!-- Importing fonts in email 3 methods -->
+<!-- Method 3 - using @font-face -->
+
+<style>
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    mso-font-alt: 'Arial';
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+    }
+ </style>
+
+<!-- Microsoft Outlook Desktop will not support web fonts, to prevent outlook from loading a web font, the link can be wrapped in an MSO conditional statement. See Below. 
+
+   <!-- [if !mso]><!-->  
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!--<![endif]-->
+
+
+<!-- To ensure good design across devices, use a mix of web fonts, system fonts, and safe fallbacks: -->
+<!-- style="font-family: 'Roboto', Verdana, sans-serif;" -->
+
+
+
+
