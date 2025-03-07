@@ -35,34 +35,87 @@ Example:
 </table>
 ```
 
+### 2️⃣ Scalable Emails (Bigger fonts, buttons, easy to tap) ###
+
+✔ Uses bigger fonts, touch-friendly buttons for mobile.
+✔ Scales up or down naturally without major layout shifts.
+✔ No advanced media queries needed.
+
+Example: 
+```
+<p style="font-size: 18px; line-height: 1.5;">
+  This text is easy to read on all devices.
+</p>
+<a href="#" style="display: inline-block; padding: 14px 24px; font-size: 20px;">
+  Click Me
+</a>
+```
+
+### 3️⃣ Hybrid (Spongy) Emails (Mix of fixed and fluid elements) ###
+
+✔ Uses max-width + percentage widths for better control.
+✔ Works in Outlook without media queries.
+✔ More structured than pure fluid layouts.
+
+
+Example: 
+```
+<table role="presentation" width="100%" style="max-width: 600px;">
+  <tr>
+    <td style="width: 49%; max-width: 290px;">Left Column</td>
+    <td style="width: 49%; max-width: 290px;">Right Column</td>
+  </tr>
+</table>
+```
+
+### 4️⃣ Mobile-First Emails (Starts with mobile layout) ###
+
+✔ Uses media queries to adjust layout for larger screens.
+✔ Defaults to a single-column layout.
+✔ Better UX for mobile users.
+
+Example: 
+```
+<style>
+  @media screen and (min-width: 600px) {
+    .two-columns { width: 50% !important; }
+  }
+</style>
+
+<table role="presentation" width="100%">
+  <tr>
+    <td class="two-columns" style="display: block; width: 100%;">Column 1</td>
+    <td class="two-columns" style="display: block; width: 100%;">Column 2</td>
+  </tr>
+</table>
+```
+
+### 5️⃣ Adaptive Emails (Uses media queries to completely change layout) ###
+
+✔ Uses CSS media queries to switch layouts.
+✔ Can hide/show content based on screen size.
+✔ Gives full control over desktop vs. mobile views..
+
+Example: 
+```
+<style>
+  @media screen and (max-width: 600px) {
+    .stack { display: block !important; width: 100% !important; }
+  }
+</style>
+
+<table role="presentation" width="100%">
+  <tr>
+    <td class="stack" style="width: 50%;">Column 1</td>
+    <td class="stack" style="width: 50%;">Column 2</td>
+  </tr>
+</table>
+```
 
 
 
 
 
-
-
-
-
-
-### 2. **Scalable Emails** ###
-
-Scalable design employs larger fonts and touch-friendly buttons that maintain usability across all platforms. This approach creates a consistent experience between desktop and mobile without requiring significant layout transformations, keeping the design integrity intact regardless of viewport size.
-
-
-### 3. **Fluid Hybrid Emails** ###
-   
-The hybrid approach blends fluid and fixed-width elements strategically to create emails that maintain structure while still adapting to different devices. This balanced methodology offers the stability of fixed layouts with the flexibility of fluid designs, making it highly versatile for complex email campaigns.
-
-
-### 4. **Mobile-First Emails** ###
-   
-Starting with smartphone-optimized designs and progressively enhancing for larger screens ensures mobile users receive the best possible experience. This approach prioritizes the constraints and opportunities of small screens, then thoughtfully expands functionality for desktop environments.
-
-
-### 5. **Adaptive Emails** ###
-
-Leveraging media queries, adaptive emails deliver tailored layouts optimized for specific device categories. This technique allows for precise control over content visibility and arrangement based on screen dimensions, enabling dramatically different presentations of the same content across devices.
 
 ****************************************************************************************************************************
 
