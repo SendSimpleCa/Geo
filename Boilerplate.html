@@ -31,7 +31,7 @@
 
       <!-- Font import - fallback web safe font for Microsoft Outlook Desktop -->
       <!--[if mso]>
-      <style>
+      <style type="text/css">
          * {
          font-family: 'Segoe UI', sans-serif !important;
          }
@@ -52,15 +52,15 @@
       <title>SendSimple.Ca | Geo v0.1 </title>
 
       <!-- Dark mode settings -->
-      <style>
+      <style type="text/css">
          :root {
          color-scheme: light dark;
          supported-color-schemes: light dark;
          }
       </style>
 
-      <!-- CSS Reset Styles --> 
-      <style>
+  
+      <style type="text/css">
 
          /* Reset body margins and padding to eliminate any unwanted space in email */
          body {
@@ -139,7 +139,7 @@
          all:revert
          }
 
-         /* Added: Reset image styles to prevent unwanted borders and spacing */
+         /* Reset image styles to prevent unwanted borders and spacing */
          img { 
          border: 0; 
          height: auto; 
@@ -148,7 +148,7 @@
          text-decoration: none; 
          }
 
-         /* Added: More comprehensive iOS blue links fix that includes font family */
+         /* iOS blue links fix that includes font family */
          a[x-apple-data-detectors] {
          color: inherit !important;
          text-decoration: none !important;
@@ -188,42 +188,352 @@
          margin: 0 auto !important;
       </style>
 
-<!-- Fonts in HTML email are tricky because not all email clients support web fonts. Unlike web design, where you can load almost any font via CSS, email clients like Outlook, Gmail, and Apple Mail each have their own restrictions. -->
+   <!-- Fonts in HTML email are tricky because not all email clients support web fonts. Unlike web design, where you can load almost any font via CSS, email clients like Outlook, Gmail, and Apple Mail each have their own restrictions. -->
 
-<!-- Importing fonts in email 3 methods -->
-<!-- Method 1 - using <link> -->
+   <!-- Importing fonts in email 3 methods -->
+   <!-- Method 1 - using <link> -->
 
-<link rel="noopener" target="_blank" rel="noopener" target="_blank" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link rel="noopener" target="_blank" rel="noopener" target="_blank" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-<!-- Importing fonts in email 3 methods -->
-<!-- Method 2 - using @import url -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-</style>
+   <!-- Importing fonts in email 3 methods -->
+   <!-- Method 2 - using @import url -->
+   <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+   </style>
 
-<!-- Importing fonts in email 3 methods -->
-<!-- Method 3 - using @font-face -->
-
-<style>
-@font-face {
+   <!-- Importing fonts in email 3 methods -->
+   <!-- Method 3 - using @font-face -->
+   <style type="text/css">
+   @font-face {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     mso-font-alt: 'Arial';
     src: url(https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
     }
- </style>
+   </style>
 
-<!-- Microsoft Outlook Desktop will not support web fonts, to prevent outlook from loading a web font, the link can be wrapped in an MSO conditional statement. See Below. 
+   <!-- Microsoft Outlook Desktop will not support linked web fonts and roll back to times new roman, to prevent outlook from loading a web font, the link can be wrapped in an MSO conditional statement. See Below. 
 
    <!-- [if !mso]><!-->  
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<!--<![endif]-->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <!--<![endif]-->
 
 
-<!-- To ensure good design across devices, use a mix of web fonts, system fonts, and safe fallbacks: -->
-<!-- style="font-family: 'Roboto', Verdana, sans-serif;" -->
+   <!-- To ensure good design across devices, use a mix of web fonts, system fonts, and safe fallbacks: -->
+   <!-- style="font-family: 'Roboto', Arial, sans-serif;" -->
 
 
+   <!-- ****************************** CSS Styles ****************************** -->
+   
+   <style type="text/css">
+
+    /* === Custom per template reset styles === */
+    /* Removes default margins and padding across common elements */
+    body, p, div, h1, h2, h3, h4, h5, h6, ul, ol, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Sets default styles for the email body */
+    body {
+        font-family: Arial, Helvetica, sans-serif; /* Web-safe fonts */
+        font-size: 14px; /* Standard readable font size */
+        line-height: 1.4; /* Good spacing between lines */
+        color: #333333; /* Dark gray text for readability */
+        background-color: #f5f5f5; /* Light gray background */
+    }
+
+    /* Ensures table elements collapse properly for consistent spacing */
+    table {
+        border-collapse: collapse; /* Removes extra spacing between table cells */
+        mso-table-lspace: 0pt; /* Removes extra space in Outlook */
+        mso-table-rspace: 0pt;
+        width: 100%; /* Makes sure tables span full width */
+    }
+
+    /* Resets images to avoid unwanted gaps and scaling issues */
+    img {
+        border: 0; /* Removes default borders around linked images */
+        height: auto; /* Ensures images scale proportionally */
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic; /* Improves image scaling in Outlook */
+        display: block; /* Prevents extra space below images */
+    }
+
+    /* Ensures consistent paragraph spacing */
+    p {
+        margin: 10px 0; /* Adds space above and below paragraphs */
+    }
+
+    /* === SHOW/HIDE ELEMENTS FOR RESPONSIVENESS === */
+    
+    /* Hides elements on mobile devices */
+    .hide-mobile {
+        display: none !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+    }
+
+    /* Hides elements on desktop (used for mobile-only content) */
+    .hide-desktop {
+        display: none;
+    }
+
+    /* === PADDING UTILITY CLASSES === */
+    
+    /* General padding helpers for quick adjustments */
+    .p-0 { padding: 0 !important; }
+    .p-5 { padding: 5px !important; }
+    .p-10 { padding: 10px !important; }
+    .p-15 { padding: 15px !important; }
+    .p-20 { padding: 20px !important; }
+
+    /* Individual side padding */
+    .pt-10 { padding-top: 10px !important; }
+    .pr-10 { padding-right: 10px !important; }
+    .pb-10 { padding-bottom: 10px !important; }
+    .pl-10 { padding-left: 10px !important; }
+
+    /* Combined horizontal and vertical padding */
+    .px-10 { padding-left: 10px !important; padding-right: 10px !important; }
+    .py-10 { padding-top: 10px !important; padding-bottom: 10px !important; }
+
+    /* === RESPONSIVE STYLES === */
+    
+    @media only screen and (max-width: 600px) {
+        /* Ensures containers fit within smaller screens */
+        .container {
+            width: 100% !important;
+        }
+
+        /* Forces elements to take full width on mobile */
+        .mobile-full {
+            width: 100% !important;
+            display: block !important;
+        }
+
+        /* Centers text alignment on mobile */
+        .center-mobile {
+            text-align: center !important;
+        }
+
+        /* Repeats hide-mobile styles for media query support */
+        .hide-mobile {
+            display: none !important;
+            max-height: 0 !important;
+            overflow: hidden !important;
+            font-size: 0 !important;
+            line-height: 0 !important;
+        }
+
+        /* Repeats hide-desktop styles for media query support */
+        .hide-desktop {
+            display: block !important;
+        }
+
+        /* Stacks table columns into rows on mobile */
+        .stack-column {
+            display: block !important;
+            width: 100% !important;
+            direction: ltr !important;
+        }
+
+        /* Adds extra padding on mobile */
+        .mobile-padding {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+    }
+
+    /* === COLUMN STACKING FOR ALL EMAIL CLIENTS === */
+    
+    /* Forces columns to stack in email clients that don’t support media queries */
+    @media only screen and (max-width: 600px), screen and (max-device-width: 600px) {
+        .column,
+        .column img {
+            width: 100% !important;
+            max-width: 100% !important;
+            display: block !important;
+        }
+    }
+    
+    /* Microsoft Outlook-specific styles */
+    /* Makes sure columns stack properly even in Outlook (which ignores media queries) */
+    <!--[if mso]>
+    <style type="text/css">
+        .column, .column img {
+            width: 100% !important;
+            max-width: 100% !important;
+            display: block !important;
+        }
+    </style>
+    <![endif]-->
+</style>
 
 
+   <!--[if mso]>
+      <style type="text/css">
+         body {background-color: #dde0e1 !important;}
+         body, table, td, p, a {font-family: 'Lato', Arial, Helvetica, sans-serif !important;}
+         table {border-spacing: 0 !important;border-collapse: collapse !important;}
+      </style>
+   <![endif]-->
+   
+</head>
+
+   <!--
+      The email background color (#FFFFFF) is defined in three places:
+      1. body tag: for most email clients
+      2. center tag: for Gmail and Inbox mobile apps 
+      3. mso conditional: For Windows 10 Desktop Email
+   -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Email Template</title>
+    <style type="text/css">
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+            font-size: 14px;
+        }
+
+        /* Table Layout */
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Container padding */
+        td {
+            padding: 10px;
+        }
+
+        /* Button Styles */
+        .button {
+            padding: 12px 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        /* Mobile Compatibility */
+        @media only screen and (max-width: 600px) {
+            /* Ensure full-width container */
+            .container {
+                width: 100% !important;
+            }
+
+            /* Stack columns vertically on mobile */
+            .two-column, .three-column {
+                display: block !important;
+            }
+
+            .column {
+                width: 100% !important;
+                display: block !important;
+                padding: 10px;
+            }
+
+            /* Button padding for mobile */
+            .button {
+                padding: 10px 15px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <table role="presentation" width="100%" class="container">
+        <!-- Header Section -->
+        <tr>
+            <td style="text-align: center; padding: 20px;">
+                <h1 style="font-size: 24px; margin: 0;">Welcome to Our Newsletter</h1>
+            </td>
+        </tr>
+
+        <!-- Image Section -->
+        <tr>
+            <td style="padding: 10px;">
+                <img src="https://via.placeholder.com/600x300" alt="Welcome Image">
+            </td>
+        </tr>
+
+     
+
+        <!-- Three-Column Section -->
+        <tr>
+            <td style="padding: 20px;">
+                <table role="presentation" class="three-column" width="100%">
+                    <tr>
+                       
+                        <td class="column" style="width: 50%; text-align: center; padding: 10px;">
+                            <h2 style="font-size: 18px; margin: 0;">Column 2</h2>
+                            <p style="font-size: 16px;">This is some content for the second column in the three-column section.</p>
+                        </td>
+                        <td class="column" style="width: 50%; text-align: center; padding: 10px;">
+                            <h2 style="font-size: 18px; margin: 0;">Column 3</h2>
+                            <p style="font-size: 16px;">This is some content for the third column in the three-column section.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Three-Column Section -->
+        <tr>
+            <td style="padding: 20px;">
+                <table role="presentation" class="three-column" width="100%">
+                    <tr>
+                        <td class="column" style="width: 33.33%; text-align: center; padding: 10px;">
+                            <h2 style="font-size: 18px; margin: 0;">Column 1</h2>
+                            <p style="font-size: 16px;">This is some content for the first column in the three-column section.</p>
+                        </td>
+                        <td class="column" style="width: 33.33%; text-align: center; padding: 10px;">
+                            <h2 style="font-size: 18px; margin: 0;">Column 2</h2>
+                            <p style="font-size: 16px;">This is some content for the second column in the three-column section.</p>
+                        </td>
+                        <td class="column" style="width: 33.33%; text-align: center; padding: 10px;">
+                            <h2 style="font-size: 18px; margin: 0;">Column 3</h2>
+                            <p style="font-size: 16px;">This is some content for the third column in the three-column section.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Footer Section -->
+        <tr>
+            <td style="text-align: center; padding: 20px; background-color: #333333; color: #ffffff;">
+                <p>Follow us on:</p>
+                <a href="https://twitter.com" style="color: #ffffff; text-decoration: none;">Twitter</a> | 
+                <a href="https://facebook.com" style="color: #ffffff; text-decoration: none;">Facebook</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
