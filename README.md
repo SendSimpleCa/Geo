@@ -21,7 +21,7 @@ Geo by SendSimple.ca seeks to solve development hurdles by providing a modular t
 
 ### 1️⃣ Fluid Emails (Uses percentage-based widths) ###
 
-✔ Uses width: 100% or percentages instead of fixed pixels.
+✔ Uses width: 100% or percentages instead of fixed pixels. <br>
 ✔ Works well in all email clients, even Outlook.
 ✔ No media queries needed.
 
